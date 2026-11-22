@@ -4039,6 +4039,113 @@
       "returned": []
     }
   ],
+  "quarter_rules": {
+    "weights": {
+      "独立": 1,
+      "联办": 1.6
+    },
+    "threshold": {
+      "甲": 0.58,
+      "乙": 0.62,
+      "丙": 0.63
+    },
+    "next_band": {
+      "达线": 24,
+      "有限": 10
+    },
+    "months": [
+      8,
+      9,
+      10
+    ]
+  },
+  "review_capacity": 3,
+  "claim_cases": [
+    {
+      "case": "T1",
+      "group": "互斥1",
+      "appointment": "9-11",
+      "part": 1,
+      "vendor": "甲",
+      "interpretation": "原方完成"
+    },
+    {
+      "case": "T1",
+      "group": "互斥1",
+      "appointment": "9-11",
+      "part": 1,
+      "vendor": "丙",
+      "interpretation": "转交完成"
+    },
+    {
+      "case": "T2",
+      "group": "互斥2",
+      "appointment": "9-4",
+      "part": 0,
+      "vendor": "乙",
+      "interpretation": "按时完成"
+    },
+    {
+      "case": "T2",
+      "group": "互斥2",
+      "appointment": "9-4",
+      "part": 0,
+      "vendor": "丙",
+      "interpretation": "仅到场"
+    },
+    {
+      "case": "T3",
+      "group": "互斥3",
+      "appointment": "10-16",
+      "part": 1,
+      "vendor": "丙",
+      "interpretation": "已按时通知取消"
+    },
+    {
+      "case": "T3",
+      "group": "互斥3",
+      "appointment": "10-16",
+      "part": 1,
+      "vendor": "丙",
+      "interpretation": "未及时通知"
+    }
+  ],
+  "evidence_options": [
+    {
+      "id": "V1",
+      "cases": [
+        "T1",
+        "T2"
+      ],
+      "cost": 2,
+      "source": "总站两方回执"
+    },
+    {
+      "id": "V2",
+      "cases": [
+        "T1"
+      ],
+      "cost": 1,
+      "source": "承接方回执"
+    },
+    {
+      "id": "V3",
+      "cases": [
+        "T2",
+        "T3"
+      ],
+      "cost": 2,
+      "source": "场地日志"
+    },
+    {
+      "id": "V4",
+      "cases": [
+        "T3"
+      ],
+      "cost": 2,
+      "source": "取消原单"
+    }
+  ],
   "ledger": [
     {
       "line": "L1",
