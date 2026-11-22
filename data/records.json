@@ -3970,10 +3970,12 @@
       "ref": "X1",
       "appointment": "8-8",
       "part": 1,
-      "approved_day": 33,
+      "approved_day": 31,
       "outcome": "补证完成",
       "vendor": "甲",
-      "alongside": "8-8/0"
+      "alongside": "8-8/0",
+      "supersedes": null,
+      "accepted_hour": null
     },
     {
       "ref": "X2",
@@ -3982,7 +3984,9 @@
       "approved_day": 33,
       "outcome": "有效转交并完成",
       "vendor": "丙",
-      "alongside": "9-11/0"
+      "alongside": "9-11/0",
+      "supersedes": null,
+      "accepted_hour": 11
     },
     {
       "ref": "X3",
@@ -3991,7 +3995,9 @@
       "approved_day": null,
       "outcome": "争议中",
       "vendor": "乙",
-      "alongside": "9-4/1"
+      "alongside": "9-4/1",
+      "supersedes": null,
+      "accepted_hour": null
     },
     {
       "ref": "X4",
@@ -4000,7 +4006,9 @@
       "approved_day": null,
       "outcome": "原方主张完成",
       "vendor": "甲",
-      "alongside": "9-11/0"
+      "alongside": "9-11/0",
+      "supersedes": null,
+      "accepted_hour": null
     },
     {
       "ref": "X5",
@@ -4009,7 +4017,9 @@
       "approved_day": 33,
       "outcome": "改由有效承接方完成",
       "vendor": "乙",
-      "alongside": "8-8/0"
+      "alongside": "8-8/0",
+      "supersedes": "X1",
+      "accepted_hour": 11.5
     }
   ],
   "correction_periods": [
