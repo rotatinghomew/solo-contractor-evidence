@@ -4110,6 +4110,26 @@
       "interpretation": "未及时通知"
     }
   ],
+  "claim_timing": [
+    {
+      "case": "T1",
+      "first_seen": 29,
+      "settled_day": 33,
+      "resolution_ref": "X2"
+    },
+    {
+      "case": "T2",
+      "first_seen": 32,
+      "settled_day": null,
+      "resolution_ref": null
+    },
+    {
+      "case": "T3",
+      "first_seen": 38,
+      "settled_day": null,
+      "resolution_ref": null
+    }
+  ],
   "evidence_options": [
     {
       "id": "V1",
