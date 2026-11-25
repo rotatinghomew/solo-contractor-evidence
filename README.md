@@ -14,4 +14,20 @@
 使用 Python 3.11。
 资料读取只需标准库。
 
-用 `python3 -m json.tool data/records.json` 查看原始记录。用 `python3 -m unittest discover -s tests -v` 核对演练资料的格式及关联。仓库目前只提供资料与输入核对，不提供业务分析结果。
+用 `python3 -m json.tool data/records.json` 查看原始记录。用 `python3 -m unittest discover -s tests -v` 核对演练资料的格式及关联。
+
+## 业务复算实现（新增）
+
+仓库在原输入核对之外，提供仅依赖标准库的同一套结算/复核引擎：
+
+```bash
+python3 solve.py        # 生成 outputs/result.json、outputs/headline.json、outputs/report.md
+python3 -m unittest discover -s tests -v
+```
+
+- `settlement.py`：从同一份 `records.json` 计算分段状态（done/disputed/failed/missing/exempt）、真正承接与责任方、单段费与联办整场附加款、场地/责任方/预约月守恒汇总、台账逐行差异、冲回与分期释放排程、季度加权比率及情景区间、调证优先级和经办人分流。
+- `report.py`：渲染 `outputs/report.md`（中文复核报告）。
+- `outputs/headline.json`：扁平关键结论；`outputs/result.json`：含全部 180 段明细的完整结果。
+- `tests/test_settlement.py`：固定关键边界（双方及时取消、严格开始前承接、X2/X5 移责、释放排程、季度区间、调证顺序等）。
+
+口径要点：取消免责以双方回执均满足提前量为准；原始 `transfers` 的 `accepted_hour=12` 等于 p1 开始 12，按“开始前”严格口径不生效，移责以已审批的 X2/X5 为准（另在结果中给出 `<=` 边界敏感性）。已付台账只做冲回/差异，不被改写。

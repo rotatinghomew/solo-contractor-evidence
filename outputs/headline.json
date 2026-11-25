@@ -1,0 +1,94 @@
+{
+  "segments_total": 180,
+  "status_counts": {
+    "done": 142,
+    "disputed": 2,
+    "failed": 6,
+    "missing": 30,
+    "exempt": 0
+  },
+  "segment_fees_payable_now_total": 20340,
+  "segment_fees_payable_now_by_responsible": {
+    "甲": 6600,
+    "乙": 6860,
+    "丙": 6880
+  },
+  "bundle_events_total": 66,
+  "bundle_bonus_qualifies_now": 42,
+  "bundle_bonus_pending_evidence": 21,
+  "bundle_bonus_blocked": 3,
+  "bundle_bonus_payable_now_total": 3500,
+  "quarter": {
+    "甲": {
+      "threshold": 0.58,
+      "prudent_ratio": 0.793839,
+      "lower": 0.793839,
+      "upper": 1.0,
+      "band": "达线",
+      "next_cap": 24,
+      "straddles": false
+    },
+    "乙": {
+      "threshold": 0.62,
+      "prudent_ratio": 0.786543,
+      "lower": 0.786543,
+      "upper": 0.909513,
+      "band": "达线",
+      "next_cap": 24,
+      "straddles": false
+    },
+    "丙": {
+      "threshold": 0.63,
+      "prudent_ratio": 0.821918,
+      "lower": 0.821918,
+      "upper": 1.0,
+      "band": "达线",
+      "next_cap": 24,
+      "straddles": false
+    }
+  },
+  "certain_difference_total": 375,
+  "release_by_period": {
+    "9": {
+      "capacity": 255,
+      "released": 255,
+      "left": 0
+    },
+    "10": {
+      "capacity": 250,
+      "released": 120,
+      "left": 130
+    },
+    "11": {
+      "capacity": 450,
+      "released": 0,
+      "left": 450
+    }
+  },
+  "clawback_outstanding": {
+    "L5": 115,
+    "L6": 55
+  },
+  "clawback_outstanding_total": 170,
+  "clawback_actually_returned": {
+    "L5": 35,
+    "L6": 75
+  },
+  "clawback_returned_total": 110,
+  "ledger_paid_total": 410,
+  "ledger_audit_total": 300,
+  "evidence_order_count_reading": [
+    "V3",
+    "V1",
+    "V4"
+  ],
+  "evidence_excluded": [
+    "V2"
+  ],
+  "evidence_first_pull_cost_reading": "V3",
+  "x5_installments": {
+    "period9": 10,
+    "period10": 120,
+    "total": 130
+  }
+}
